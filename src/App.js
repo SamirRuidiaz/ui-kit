@@ -1,23 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState }  from 'react';
+import { LiveSearchInput } from './components/LiveSearch/LiveSearchInput';
 
 function App() {
+
+  const [valueItem, setValueItem] = useState('');
+  const handleChange = event => {
+    console.log(event)
+    setValueItem( event.name );
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <main>
+        <h2>Get Seach: {valueItem}</h2>
+        <section>
+          <LiveSearchInput 
+          url='https://rickandmortyapi.com/api/character'
+          nameSearch="name"
+          idSearch="id"
+          handleItemSelected={ event => handleChange(event) }
+          />
+        </section>
+      </main>
     </div>
   );
 }

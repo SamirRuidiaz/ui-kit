@@ -1,0 +1,110 @@
+.live__search {
+  font-family: Montserrat;
+
+  &__label {
+    color: #000;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+  }
+
+  &__box {
+    position: relative;
+  }
+
+  &__icon__input > svg > path {
+    fill: #9D00D4; 
+  }
+  
+  &__input {
+    position: relative;
+    width: 100%;
+    display: block;
+    color: #444444;
+    background: #FFFFFF;
+    border: 1px solid #AAAAAA;
+    border-radius: 3px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+    box-sizing: border-box;
+    min-width: 120px;
+    padding: 13px 40px 13px 12px;
+    outline: none;
+    outline: 0;
+    resize: none;
+    margin-top: 5px;
+    z-index: 1;
+    font-family: Montserrat;
+  }
+
+  &__input::-webkit-input-placeholder, 
+  &__input:-ms-input-placeholder, 
+  &__input::placeholder {
+    color: #AAAAAA;
+  }
+
+  &__input:focus {
+    border: 1px solid #9D00D4; 
+  }  
+
+  &__icon {
+    border: none;
+    height: 43px;
+    width: 40px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-align: center;
+    align-items: center;
+    font-size: 12px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+  }
+
+  &__listitem {
+    position: absolute;
+    background: #FFFFFF;
+    border: 1px solid #AAAAAA;
+    box-sizing: border-box;
+    border-radius: 3px;
+    top: 40px;
+    z-index: 0;
+    width: 100%;
+    max-height: 225px;
+    overflow-y: scroll;
+    outline: none;
+    outline: 0;
+  }
+
+  &__itemlabel {
+    background: #FFF;
+    color: #444444;
+    padding: 11px 10px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    cursor: pointer;
+
+    span{
+      strong{
+        font-weight: bold;
+        color: #000;
+      }
+    }
+  }
+
+  &__itemlabel:hover {
+    background: #F1F1F1;
+    outline: none;
+    outline: 0;
+    resize: none;
+  }
+}
