@@ -92,18 +92,20 @@ export const LiveSearchInput = ({url, nameSearch, idSearch ,handleItemSelected})
           <span className={styles.live__search__icon}> 
             <img className={styles.live__search__icon__input} src={ isLoading ? iconSpinner : iconSearch} alt="icon"/> 
           </span>
-          <div className={styles.live__search__listitem}>
+          <section tabIndex={0} role="list" className={styles.live__search__listitem}>
             {
               listItem.map((item, i) =>(
                 <div 
+                  tabIndex={i+1}
                   key={i}
+                  role="listitem"
                   onClick={() => selectedItem(item)}
                   className={styles.live__search__itemlabel}>
                     <span dangerouslySetInnerHTML={{__html: _words(item.name)}}></span>
                 </div>
               ))
             }
-          </div>
+          </section>
         </div>
       </div>
     </>
